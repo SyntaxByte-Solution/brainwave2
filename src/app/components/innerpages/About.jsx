@@ -45,13 +45,28 @@ export default function About() {
           >
             <div className="vstack items-center gap-4 mb-4 sm:mb-6 lg:mb-8 max-w-850px mx-auto text-center">
               <h1 className="h2 sm:h1 lg:display-6 xl:display-5 m-0">
-                About Brainwave
+                About Us – Brainwave
               </h1>
-              <p className="fs-6 md:fs-5 text-dark dark:text-white text-opacity-70">
-                Brainwave is a design and Webflow development agency dedicated
-                to helping startups scale. We craft stunning digital experiences
-                and build powerful Webflow solutions that empower businesses to
-                achieve their digital goals and raise their success.
+              <p className="fs-6 md:fs-5 text-dark dark:text-white text-opacity-70 text-left">
+                At Brainwave, we believe in turning bold ideas into powerful digital experiences. We are a forward-thinking web agency driven by creativity, innovation, and cutting-edge technology.
+              </p>
+              <p className="fs-6 md:fs-5 text-dark dark:text-white text-opacity-70 text-left">
+                Our core expertise lies in web design and development, where we craft visually stunning and high-performing websites tailored to each client’s unique needs. From sleek corporate websites to dynamic ecommerce platforms, we deliver solutions that blend design elegance with seamless functionality.
+              </p>
+              <p className="fs-6 md:fs-5 text-dark dark:text-white text-opacity-70 text-left">
+                Beyond the web, Brainwave extends its creativity into game development, building immersive 2D and 3D worlds that captivate audiences and push the boundaries of interactive entertainment.
+              </p>
+              <p className="fs-6 md:fs-5 text-dark dark:text-white text-opacity-70 text-left">
+                We also specialize in branding and identity design, helping businesses stand out with strong visuals and consistent storytelling that connects with their target audience.
+              </p>
+              <p className="fs-6 md:fs-5 text-dark dark:text-white text-opacity-70 text-left">
+                Our team of designers and animators bring ideas to life with 2D/3D animations, turning concepts into compelling visuals that engage, educate, and inspire. To keep our clients ahead in the digital landscape, we offer SEO optimization and site maintenance services, ensuring websites stay secure, updated, and highly visible in search results.
+              </p>
+              <p className="fs-6 md:fs-5 text-dark dark:text-white text-opacity-70 text-left">
+                Brainwave works across diverse industries, including gaming, B2B, financial services, artificial intelligence, Web3, and ecommerce. This broad experience allows us to adapt quickly and deliver tailored solutions that meet the specific challenges of each sector.
+              </p>
+              <p className="fs-6 md:fs-5 text-dark dark:text-white text-opacity-70 text-left">
+                At our core, we are problem solvers and storytellers. We thrive on collaboration, innovation, and pushing boundaries to create digital experiences that truly make an impact. With Brainwave, you don’t just get a service provider—you gain a creative partner dedicated to your growth and success in the digital world. Let’s build the future together, one innovation at a time.
               </p>
             </div>
 
@@ -62,8 +77,8 @@ export default function About() {
                     className="media-cover image uc-transition-scale-up uc-transition-opaque"
                     alt="About Brainwave"
                     src="/assets/images/template/hero-about-01.jpg"
-                    width="1000"
-                    height="1500"
+                    width={1000}
+                    height={1500}
                   />
                 </figure>
                 <div className="position-absolute top-0 start-0 z-1 ms-n8 mt-n8 d-none lg:d-block">
@@ -71,15 +86,15 @@ export default function About() {
                     className="w-200px xl:w-250px d-block dark:d-none"
                     alt="hand-pencil"
                     src="/assets/images/template/hand-pencil.svg"
-                    width="154"
-                    height="309"
+                    width={154}
+                    height={309}
                   />
                   <Image
                     className="w-200px xl:w-250px d-none dark:d-block"
                     alt="hand-pencil-dark"
                     src="/assets/images/template/hand-pencil-dark.svg"
-                    width="154"
-                    height="309"
+                    width={154}
+                    height={309}
                   />
                 </div>
               </div>
@@ -92,8 +107,8 @@ export default function About() {
                       className="media-cover image"
                       alt="Brainwave Webflow Development"
                       src="/assets/images/template/hero-about-02.jpg"
-                      width="1000"
-                      height="667"
+                      width={1000}
+                      height={667}
                     />
                   </figure>
                 </div>
@@ -102,15 +117,15 @@ export default function About() {
                     className="w-200px xl:w-250px d-block dark:d-none"
                     alt="empathing"
                     src="/assets/images/template/empathing.svg"
-                    width="278"
-                    height="229"
+                    width={278}
+                    height={229}
                   />
                   <Image
                     className="w-200px xl:w-250px d-none dark:d-block"
                     alt="empathing-dark"
                     src="/assets/images/template/empathing-dark.svg"
-                    width="278"
-                    height="229"
+                    width={278}
+                    height={229}
                   />
                 </div>
               </div>
