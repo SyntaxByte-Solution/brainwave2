@@ -51,29 +51,16 @@ export default function Header2() {
               data-uc-navbar="mode: click; animation: uc-animation-slide-top-small; duration: 150;"
             >
               <div className="uc-navbar-left">
-                <div className="uc-logo text-dark dark:text-white ">
-                  <Link
-                    className="panel font-bold no-underline"
-                    href={`/`}
-                    style={{ width: 140, color: "var(--colors-accent-primary)" }}
-                  >
-                    {/* <Image
-                      className="dark:d-none"
-                      alt="Lexend"
-                      src="/assets/images/common/logo-light.svg"
-                      width="117"
-                      height="40"
-                    />
-                    <Image
-                      className="d-none dark:d-block"
-                      alt="Lexend"
-                      src="/assets/images/common/logo-dark.svg"
-                      width="117"
-                      height="40"
-                    /> */}
-                    Brainwave
-                  </Link>
-                </div>
+               <div className="uc-logo">
+                <Link
+                  className="panel font-bold no-underline"
+                  href={`/`}
+                  style={{ width: 140, color: "var(--colors-accent-primary)" }}
+                >
+                  Brainwave
+                </Link>
+              </div>
+
                 <ul className="uc-navbar-nav gap-3 xl:gap-4 d-none lg:d-flex fw-medium ms-2">
                   <Nav />
                 </ul>

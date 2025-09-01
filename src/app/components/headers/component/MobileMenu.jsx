@@ -82,21 +82,16 @@ export default function MobileMenu() {
         style={{ maxWidth: 876 }}
       >
         <header className="uc-offcanvas-header hstack justify-between items-center pb-2 bg-white dark:bg-gray-900">
-          <div className="uc-logo">
-            <Link
-              href={`/`}
-              className="h5 text-none text-gray-900 dark:text-white text-bold"
-            >
-              {/* <Image
-                className="w-32px"
-                alt="Lexend"
-                src="/assets/images/common/logo-mark.svg"
-                width="34"
-                height="34"
-              /> */}
-              Brainwave 
-            </Link>
-          </div>
+         <div className="uc-logo">
+          <Link
+            href={`/`}
+            className="font-bold no-underline"
+            style={{ color: "var(--colors-accent-primary)" }}
+          >
+            Brainwave
+          </Link>
+        </div>
+
           <button
             className="uc-offcanvas-close rtl:end-auto rtl:start-0 m-1 mt-2 icon-3 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all"
             type="button"
