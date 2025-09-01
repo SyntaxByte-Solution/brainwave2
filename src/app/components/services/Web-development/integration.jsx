@@ -1,0 +1,87 @@
+// import { integrations } from "@/data/integrations";
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Rocket } from "lucide-react";
+const integrations = [
+  {
+    icon: Rocket,
+    title: "Responsive Design",
+    description: "Websites that adapt flawlessly to any screen size or device.",
+  },
+  {
+    icon: Rocket,
+    title: "Fast Performance",
+    description:
+      "Optimized loading speeds to keep your visitors engaged and satisfied.",
+  },
+  { icon: Rocket, description: "Maximize ROI with expertly managed paid ads." },
+  {
+    icon: Rocket,
+    title: "SEO Ready",
+    description:
+      "Built with best SEO practices to boost your search engine rankings.",
+  },
+];
+export default function Integration() {
+  return (
+    <div
+      id="integrations"
+      className="integrations section panel overflow-hidden"
+    >
+      <div className="section-outer panel py-6 xl:py-9 bg-secondary dark:bg-primary dark:text-white">
+        <div className="container max-w-lg">
+          <div className="section-inner panel">
+            <div
+              className="panel vstack items-center gap-4 sm:gap-6 xl:gap-8"
+              data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 100});"
+            >
+              <div className="panel vstack items-center gap-2 xl:gap-3 text-center">
+                <h2 className="h3 lg:h2 xl:h1 m-0">
+                  Create Stunning Websites for Portfolio
+                </h2>
+                <p className="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">
+                  We offer specialized web development services to meet diverse
+                  business needs with creativity and precision.
+                </p>
+              </div>
+              <div
+                className="row child-cols-12 sm:child-cols-6 lg:child-cols-3 col-match g-2 lg:g-4 justify-between"
+                data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});"
+              >
+                {integrations.map((integration, index) => {
+                  const IconComponent = integration.icon;
+                  return (
+                    <div key={index}>
+                      <div className="panel vstack justify-between gap-4 p-3 rounded lg:rounded-2 bg-white text-dark">
+                        <div className="vstack gap-3">
+                          <div className="hstack justify-between items-center">
+                            {/* <div className="vstack">
+                              <h5 className="h5 m-0 text-dark">
+                                {integration.icon}
+                              </h5>
+                              <span className="fs-7 opacity-70 dark:opacity-80">
+                                {integration.category}
+                              </span>
+                            </div> */}
+                            <IconComponent
+                              className="text-muted-foreground h-8 w-8 transition-colors group-hover:text-orange-500"
+                              aria-hidden="true"
+                            />
+                          </div>
+                          <p className="fs-6 opacity-70 dark:opacity-80">
+                            {integration.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

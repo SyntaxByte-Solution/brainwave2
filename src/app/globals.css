@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@theme {
+  /* Light mode */
+  --color-light-background: #ffffff;
+  --color-light-foreground: #111111;
+  --color-light-foreground-muted: #4b5563;
+  --color-light-border: #e5e7eb;
+  --color-light-card-background: #ffffff;
+  --color-light-primary: #e50914; /* vivid red */
+  --color-light-primary-foreground: #ffffff;
+  --color-light-accent: #b91c1c; /* deep crimson */
+  --color-light-accent-foreground: #ffffff;
+
+  /* Dark mode */
+  --color-dark-background: #0a0a0a;
+  --color-dark-foreground: #f9fafb;
+  --color-dark-foreground-muted: #9ca3af;
+  --color-dark-border: #374151;
+  --color-dark-card-background: #1a1a1a;
+  --color-dark-primary: #ef4444; /* slightly brighter red */
+  --color-dark-primary-foreground: #0a0a0a;
+  --color-dark-accent: #dc2626; /* strong dark red */
+  --color-dark-accent-foreground: #ffffff;
+
+  /* Defaults */
+  --color-background: var(--color-light-background);
+  --color-card-background: var(--color-light-card-background);
+  --color-foreground: var(--color-light-foreground);
+  --color-foreground-muted: var(--color-light-foreground-muted);
+  --color-border: var(--color-light-border);
+  --color-primary: var(--color-light-primary);
+  --color-primary-foreground: var(--color-light-primary-foreground);
+  --color-accent: var(--color-light-accent);
+  --color-accent-foreground: var(--color-light-accent-foreground);
+}
+
+
+@layer base {
+  :root {
+    --font-sans: "Poppins", "Inter", sans-serif;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+
+  .dark {
+    --color-background: var(--color-dark-background);
+    --color-card-background: var(--color-dark-card-background);
+    --color-foreground: var(--color-dark-foreground);
+    --color-foreground-muted: var(--color-dark-foreground-muted);
+    --color-border: var(--color-dark-border);
+    --color-primary: var(--color-dark-primary);
+    --color-primary-foreground: var(--color-dark-primary-foreground);
+    --color-accent: var(--color-dark-accent);
+    --color-accent-foreground: var(--color-dark-accent-foreground);
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 9999px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .view-case-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+    border-radius: 9999px;
+    padding: 0.25rem 0.75rem;
+    margin-left: 0.5rem;
+    text-decoration: none;
+    font-size: 0.875rem;
+    white-space: nowrap; /* Prevents text wrapping */
+    min-width: 4.5rem; /* Ensures button stays straight */
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .view-case-btn:hover {
+    background-color: var(--color-accent);
+    color: var(--color-accent-foreground);
+  }
+
+  .animate-marquee {
+    animation: var(--animation-marquee);
+    white-space: nowrap;
+    will-change: transform;
+  }
+
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+}
+
+/* Add to @layer base */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16rem; /* Adjust width as needed */
+  background-color: var(--color-card-background);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  z-index: 50;
+}
+
+.dropdown a {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: var(--color-foreground);
+  font-size: 0.875rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.dropdown a:hover {
+  background-color: var(--color-accent);
+  color: var(--color-accent-foreground);
+}
+
+.dropdown a svg {
+  margin-right: 0.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--color-accent);
+}
+
+header {
+  background-color: var(--color-card-background);
+  border: 1px solid var(--color-border);
+}
+
+/* Append to existing @import and @theme sections */
+
+/* Add to @layer base */
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-card-background);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.service-card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-foreground);
+}
+
+.service-card p {
+  margin-top: 0.5rem;
+  color: var(--color-foreground-muted);
+  font-size: 1rem;
+}
+
+.service-card .tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.service-card .tags span {
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Add game-specific animation for hero section */
+.game-hero {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-accent) 100%
+  );
+  padding: 4rem 2rem;
+  border-radius: 0.75rem;
+  color: var(--color-primary-foreground);
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.game-hero h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.game-hero p {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+/* Ensure compatibility with dark mode */
+.dark .service-card {
+  background-color: var(--color-dark-card-background);
+  border-color: var(--color-dark-border);
+}
+
+.dark .service-card .tags span {
+  background-color: var(--color-dark-primary);
+  color: var(--color-dark-primary-foreground);
+}
+
+.dark .game-hero {
+  background: linear-gradient(
+    135deg,
+    var(--color-dark-primary) 0%,
+    var(--color-dark-accent) 100%
+  );
+}

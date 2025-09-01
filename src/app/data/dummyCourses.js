@@ -1,0 +1,51 @@
+export const dummyCourses = [
+  {
+    id: 1,
+    title: "React for Beginners",
+    description: "Learn React from scratch with hands-on projects.",
+    price: "$49",
+    oldPrice: "$79",
+    image: "/assets/images/courses/react-course.jpeg",
+  },
+  {
+    id: 2,
+    title: "Mastering Next.js",
+    description: "Build production-ready apps using Next.js.",
+    price: "$59",
+    oldPrice: "$89",
+    image: "/assets/images/courses/nextjs-course.webp",
+
+  },
+  {
+    id: 3,
+    title: "Tailwind CSS in Depth",
+    description: "Create modern UIs quickly with Tailwind CSS.",
+    price: "$39",
+    oldPrice: "$59",
+    image: "/assets/images/courses/tailwind-course.jpg",
+  },
+  {
+    id: 4,
+    title: "Node.js Essentials",
+    description: "Understand the core concepts of Node.js.",
+    price: "$45",
+    oldPrice: "$70",
+    image: "/assets/images/courses/nodejs-course.png",
+  },
+  {
+    id: 5,
+    title: "Fullstack Development",
+    description: "Combine frontend & backend skills for real apps.",
+    price: "$99",
+    oldPrice: "$149",
+    image: "/assets/images/courses/fullstack-course.png",
+  },
+  {
+    id: 6,
+    title: "UI/UX Design Basics",
+    description: "Learn design principles for better user experience.",
+    price: "$35",
+    oldPrice: "$60",
+    image: "/assets/images/courses/uiux-course.jpg",
+  },
+];
