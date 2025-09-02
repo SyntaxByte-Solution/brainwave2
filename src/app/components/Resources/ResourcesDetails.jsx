@@ -4,7 +4,58 @@ import Link from "next/link";
 import Image from "next/image";
 import { Gallery, Item } from "react-photoswipe-gallery";
 
-export default function BlogDetails({ blogItem }) {
+const blogArticles = [
+  {
+    title: "SEO Strategy BY Expert",
+    categories: "strategy",
+    description: [
+      { type: "heading", level: 1, content: "Overview" },
+      {
+        type: "paragraph",
+        content:
+          " Webflow has become one of the most popular website builders for designers, developers, and businesses that want visually stunning, highly functional websites. ",
+      },
+      { type: "heading", level: 2, content: "Overview" },
+      {
+        type: "paragraph",
+        content:
+          "However, even the most beautiful design won’t bring results if your site cannot be found in search engines.",
+      },
+      { type: "heading", level: 3, content: "Overview" },
+      {
+        type: "paragraph",
+        content:
+          "That’s where SEO (Search Engine Optimization) comes in. <br/>The good news? Webflow is inherently SEO-friendly.",
+      },
+    ],
+  },
+  {
+    title: "How to Build Rest Api",
+    categories: "strategy",
+    description: [
+      { type: "heading", level: 1, content: "Overview" },
+      {
+        type: "paragraph",
+        content:
+          " Webflow has become one of the most popular website builders for designers, developers, and businesses that want visually stunning, highly functional websites. ",
+      },
+      { type: "heading", level: 2, content: "Overview" },
+      {
+        type: "paragraph",
+        content:
+          "However, even the most beautiful design won’t bring results if your site cannot be found in search engines.",
+      },
+      { type: "heading", level: 3, content: "Overview" },
+      {
+        type: "paragraph",
+        content:
+          "That’s where SEO (Search Engine Optimization) comes in. <br/>The good news? Webflow is inherently SEO-friendly.",
+      },
+    ],
+  },
+];
+
+export default function ResourceDetails({ blogItem }) {
   return (
     <>
       <div
@@ -35,7 +86,9 @@ export default function BlogDetails({ blogItem }) {
               <i className="unicon-chevron-right fw-medium opacity-50 rtl:rotate-180" />
             </li>
             <li>
-              <Link href={`/blog-category/Strategy`}>Strategy</Link>
+              <Link href={`/resource-category/` + blogItem.category}>
+                {blogItem.category}
+              </Link>
             </li>
             <li>
               <i className="unicon-chevron-right fw-medium opacity-50 rtl:rotate-180" />
@@ -109,8 +162,8 @@ export default function BlogDetails({ blogItem }) {
                 <figure className="featured-image m-0 rounded ratio ratio-2x1 rounded uc-transition-toggle overflow-hidden">
                   <Image
                     className="media-cover image uc-transition-scale-up uc-transition-opaque"
-                    alt="Maximizing your reach with marketing strategies"
-                    src="/assets/images/blog/post-full.jpg"
+                    alt={blogItem.imgAlt}
+                    src={blogItem.imgSrc}
                     width="1280"
                     height="853"
                   />
@@ -126,234 +179,59 @@ export default function BlogDetails({ blogItem }) {
                 className="post-content panel fs-6 md:fs-5"
                 data-uc-lightbox="animation: scale"
               >
-                <p>
-                  She started her blog exactly six months before I launched
-                  Camels &amp; Chocolate, and she really set the bar high for my
-                  own blog birthday, Y’all this summer! I’ve already been
-                  brainstorming party ideas … who wants to come? It’s no
-                  coincidence that Buster Keaton and Charlot’s movies of the and
-                  award-winning chefs about what exactly makes their hometowns
-                  In fact, not being able to rely on spoken word made them
-                  better storytellers. They fully understood and used the power
-                  of showing without words. A range of amenities provides many
-                  things to do in Bellevue. About 40 percent of the city’s
-                  population are minorities, which contributes to an overall
-                  diverse range of lifestyles and ideas.
-                </p>
-                <p className="mt-3">
-                  I talked to climbers, Olympic mountain bikers, musicians, and
-                  award-winning chefs about what exactly makes their hometowns
-                  so special and fun.
-                </p>
-                <div className="panel mt-3">
-                  <figure className="float-end ms-3 mb-1">
-                    <Item
-                      original="/assets/images/blog/post-1.jpg"
-                      thumbnail="/assets/images/blog/post-1.jpg"
-                      width="1280"
-                      height="853"
-                    >
-                      {({ ref, open }) => (
-                        <figure className="featured-image m-0 rounded ratio ratio-1x1 sm:w-300px uc-transition-toggle overflow-hidden">
-                          <Image
-                            className="media-cover image uc-transition-scale-up uc-transition-opaque"
-                            alt="Holding flower, by Anthony Tran"
-                            src="/assets/images/blog/post-1.jpg"
-                            width="1280"
-                            height="853"
-                            ref={ref}
-                          />
-                          <a
-                            onClick={open}
-                            className="position-cover"
-                            data-caption="Holding flower, by Anthony Tran"
-                          ></a>
-                        </figure>
-                      )}
-                    </Item>
-                    <figcaption className="fs-7 mt-1 text-center text-gray-400 dark:text-gray-200">
-                      Holding flower, by Anthony Tran
-                    </figcaption>
-                  </figure>
-                  <p>
-                    Bike paths and sidewalks make getting to and from the city’s
-                    many festivals, museums, restaurants and music venues easy.
-                    A range of amenities provides many things to do in Bellevue.
-                    About 40 percent of the city’s population are minorities,
-                    which contributes to an overall diverse range of lifestyles
-                    and ideas.
-                  </p>
-                  <p className="mt-3">
-                    While Denver sits at the base of the Rocky Mountains, it’s
-                    not considered a mountain town since it takes at least an
-                    hour to get to the Rockies for snowboarding and ski
-                    activities, a local expert explained. Olympic mountain
-                    bikers, musicians, and award-winning chefs about what
-                    exactly makes their hometowns so special and fun.
-                  </p>
-                  <p className="mt-3">
-                    In fact, not being able to rely on spoken word made them
-                    better storytellers. They fully understood and used the
-                    power of showing without words. They fully understood and
-                    used the power of showing without words. They fully
-                    understood and used the power of showing without words.
-                  </p>
-                </div>
-                <h4 className="h4 xl:h3 mt-4 mb-2 xl:mb-3">Capital of Texas</h4>
-                <p>
-                  Visual storytelling is simply the way most brands will decide
-                  to go in 2016 &amp; beyond, as they try to tell their story to
-                  their customers the oldest and most important unwritten rule
-                  in film industry says that you shouldn’t rely much on words to
-                  tell your story. In fact, you should rely on them as less as
-                  possible. It’s no coincidence that Buster Keaton and Charlot’s
-                  movies remain among the biggest classic movies of all time. In
-                  fact, not being able to rely on spoken word made them better
-                  storytellers. They fully understood and used the power of
-                  showing without words.
-                </p>
-                <p className="mt-3">
-                  While Denver sits at the base of the Rocky Mountains, it’s not
-                  considered a mountain town since it takes at least an hour to
-                  get to the Rockies for snowboarding and ski activities, a
-                  local expert explained sits at the base of the Rocky
-                  Mountains, it’s not considered a mountain town since it takes
-                  at least an hour to get to the Rockies for snowboarding and
-                  ski activities, a local expert explained.
-                </p>
-                <figure className="my-3 sm:my-4">
-                  <Item
-                    original="/assets/images/blog/post-2.jpg"
-                    thumbnail="/assets/images/blog/post-2.jpg"
-                    width="1280"
-                    height="853"
-                  >
-                    {({ ref, open }) => (
-                      <figure className="featured-image m-0 rounded ratio ratio-3x2 uc-transition-toggle overflow-hidden">
-                        <Image
-                          className="media-cover image uc-transition-scale-up uc-transition-opaque"
-                          alt="Pink Marketing, by Mak"
-                          src="/assets/images/blog/post-2.jpg"
+                {/* <div dangerouslySetInnerHTML={{ __html: blogItem.desc }} /> */}
+                {blogItem.desc.map((item, j) => {
+                  if (item.type === "heading")
+                    return (
+                      <h3
+                        key={j}
+                        className="h4 xl:h3 mt-4 mb-2 xl:mb-3"
+                      >
+                        {item.content}
+                      </h3>
+                    );
+                  if (item.type === "paragraph")
+                    return (
+                      <p
+                        key={j}
+                        className="mt-3"
+                      >
+                        {item.content}
+                      </p>
+                    );
+                  if (item.type === "imgGallery")
+                    return (
+                      <figure
+                        className="my-3 sm:my-4"
+                        key={j}
+                      >
+                        <Item
+                          original={item.content}
+                          thumbnail={item.content}
                           width="1280"
                           height="853"
-                          ref={ref}
-                        />
-                        <a
-                          onClick={open}
-                          className="position-cover"
-                          data-caption="Pink Marketing, by Mak"
-                        ></a>
+                        >
+                          {({ ref, open }) => (
+                            <figure className="featured-image m-0 rounded ratio ratio-3x2 uc-transition-toggle overflow-hidden">
+                              <Image
+                                className="media-cover image uc-transition-scale-up uc-transition-opaque"
+                                alt="Gallery img"
+                                src={item.content}
+                                width="1280"
+                                height="853"
+                                ref={ref}
+                              />
+                              <a
+                                onClick={open}
+                                className="position-cover"
+                                data-caption="Pink Marketing, by Mak"
+                              ></a>
+                            </figure>
+                          )}
+                        </Item>
                       </figure>
-                    )}
-                  </Item>
-                  <figcaption className="fs-7 mt-1 text-center text-gray-400 dark:text-gray-200">
-                    Pink Marketing, by Mak
-                  </figcaption>
-                </figure>
-                <p>
-                  While Denver sits at the base of the Rocky Mountains, it’s not
-                  considered a mountain town since it takes at least an hour to
-                  get to the Rockies for snowboarding and ski activities, a
-                  local expert explained. Olympic mountain bikers, musicians,
-                  and award-winning chefs about what exactly makes their
-                  hometowns so special and fun. <br />
-                  In fact, not being able to rely on spoken word made them
-                  better storytellers. They fully understood and used the power
-                  of showing without words.
-                </p>
-                <p className="mt-3">
-                  Probably the oldest and most important unwritten rule in film
-                  industry says that you shouldn’t rely much on words to tell
-                  your story. In fact, you should rely on them as less as
-                  possible is simply the way most brands will decide to go in
-                  2016 &amp; beyond, as they try to tell their story to their
-                  customers.
-                </p>
-                <h4 className="h4 xl:h3 mt-4 mb-2 xl:mb-3">
-                  Great Schools and Entertainment
-                </h4>
-                <p>
-                  Education is a high point when it comes to analyzing the
-                  quality of life factors that make Ann Arbor one of the best
-                  places to live. The University of Michigan, which has 43,000
-                  students, makes Ann Arbor a perennial candidate for our annual
-                  ranking of the best college towns and plays a big role in the
-                  city’s economy and culture.
-                </p>
-                <p className="mt-3">
-                  While Denver sits at the base of the Rocky Mountains, it’s not
-                  considered a mountain town since it takes considered at least
-                  an hour to get to the Rockies for snowboarding and ski
-                  activities, a local expert explained sits at the base of the
-                  Rocky Mountains, it’s not considered a mountain town since it
-                  takes at least an hour to get to the Rockies for snowboarding
-                  and ski activities, a local expert explained.
-                </p>
-                <div className="panel my-3">
-                  <figure className="float-start me-3 mb-0">
-                    <Item
-                      original="/assets/images/blog/post-3.jpg"
-                      thumbnail="/assets/images/blog/post-3.jpg"
-                      width="1280"
-                      height="853"
-                    >
-                      {({ ref, open }) => (
-                        <figure className="featured-image m-0 rounded ratio ratio-1x1 sm:w-300px uc-transition-toggle overflow-hidden">
-                          <Image
-                            className="media-cover image uc-transition-scale-up uc-transition-opaque"
-                            alt="Great Schools and Entertainment"
-                            src="/assets/images/blog/post-3.jpg"
-                            width="1280"
-                            height="854"
-                            ref={ref}
-                          />
-                          <a
-                            onClick={open}
-                            className="position-cover"
-                            data-caption="Great Schools and Entertainment"
-                          ></a>
-                        </figure>
-                      )}
-                    </Item>
-                    <figcaption className="fs-7 mt-1 text-center text-gray-400 dark:text-gray-200">
-                      Great Schools and Entertainment
-                    </figcaption>
-                  </figure>
-                  <p>
-                    Bike paths and sidewalks make getting to and from the city’s
-                    many festivals, museums, restaurants and music venues easy.
-                    A range of amenities provides many things to do in Bellevue.
-                    About 40 percent of the city’s population are minorities,
-                    which contributes to an overall diverse range of lifestyles
-                    and ideas.
-                  </p>
-                  <p>
-                    While Denver sits at the base of the Rocky Mountains, it’s
-                    not considered a mountain town since it takes at least an
-                    hour to get to the Rockies for snowboarding and ski
-                    activities, a local expert explained. Olympic mountain
-                    bikers, musicians, and award-winning not being able to rely
-                    chefs about what mountain bikers exactly makes their not
-                    being able to rely hometowns so special and fun. In fact,
-                    not being able to rely on spoken word made them better
-                    storytellers. They fully understood and used the power of
-                    showing without words. They fully understood and used the
-                    power of showing without words.
-                  </p>
-                </div>
-                <p>
-                  Probably the oldest and most important unwritten rule in film
-                  industry says that you shouldn’t rely much on words to tell
-                  your story. In fact, you should rely on them as less as
-                  possible is simply the way most brands will decide to go in
-                  2016 &amp; beyond, as they try to tell their story to their
-                  customers.
-                </p>
-                <p className="mt-3">
-                  I talked to climbers, Olympic mountain bikers, musicians, and
-                  award-winning chefs about what exactly makes their hometowns
-                  so special and fun.
-                </p>
+                    );
+                })}
               </div>
             </Gallery>
             <div className="post-footer panel vstack sm:hstack gap-3 justify-between justifybetween border-top py-4 mt-4 xl:py-9 xl:mt-9">
@@ -363,40 +241,17 @@ export default function BlogDetails({ blogItem }) {
                     Tags:
                   </span>
                 </li>
-                <li>
-                  <a
-                    href="#"
-                    className="gap-0"
-                  >
-                    Marketing
-                    <span className="text-black dark:text-white">,</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="gap-0"
-                  >
-                    Strategies
-                    <span className="text-black dark:text-white">,</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="gap-0"
-                  >
-                    Boost <span className="text-black dark:text-white">,</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="gap-0"
-                  >
-                    Business
-                  </a>
-                </li>
+                {blogItem.tags.map((tag, i) => (
+                  <li key={i}>
+                    <a
+                      href="#"
+                      className="gap-0"
+                    >
+                      {tag}
+                      <span className="tags text-black dark:text-white"></span>
+                    </a>
+                  </li>
+                ))}
               </ul>
               <ul className="post-share-icons nav-x gap-narrow">
                 <li className="me-1">
@@ -435,48 +290,6 @@ export default function BlogDetails({ blogItem }) {
                   </a>
                 </li>
               </ul>
-            </div>
-            <div className="post-author panel py-4 px-3 sm:p-3 xl:p-4 bg-gray-25 dark:bg-opacity-5 rounded lg:rounded-2">
-              <div className="row g-4 items-center">
-                <div className="col-12 sm:col-5 xl:col-3">
-                  <figure className="featured-image m-0 rounded ratio ratio-1x1 uc-transition-toggle overflow-hidden">
-                    <Image
-                      className="media-cover image uc-transition-scale-up uc-transition-opaque"
-                      alt="Amir Nisi"
-                      src="/assets/images/blog/post-author.jpg"
-                      width="1000"
-                      height="667"
-                    />
-                  </figure>
-                </div>
-                <div className="col">
-                  <div className="panel vstack items-start gap-2 md:gap-3">
-                    <h4 className="h5 m-0">Amir Nisi</h4>
-                    <p className="fs-6">
-                      Creative and experienced content writer with 6+ years of
-                      experience eager to create unique content strategy for
-                      Lexend to turn website visitors into customers.
-                    </p>
-                    <ul className="nav-x gap-1 text-gray-400 dark:text-white">
-                      <li>
-                        <a href="#medium">
-                          <i className="icon-2 unicon-logo-medium" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#x">
-                          <i className="icon-2 unicon-logo-x-filled" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#instagram">
-                          <i className="icon-2 unicon-logo-linkedin" />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
