@@ -26,7 +26,7 @@ export default function BreadCumb({ category }) {
             <i className="unicon-chevron-right fw-medium opacity-50 rtl:rotate-180"></i>
           </li>
           <li>
-            <Link href={`/blog`}>Blog</Link>
+            <Link href={`/resource`}>Resources</Link>
           </li>
           <li>
             <i className="unicon-chevron-right fw-medium opacity-50 rtl:rotate-180"></i>
