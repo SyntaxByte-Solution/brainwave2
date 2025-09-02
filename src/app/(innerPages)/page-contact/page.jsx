@@ -8,9 +8,9 @@ import Brands from "@/components/common/Brands2";
 import Blog from "@/components/homes/home-3/Blog";
 export const metadata = {
   title:
-    "Contact 1 || Lexend - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Contact 1 || Brainwave",
   description:
-    "Lexend - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Brainwave - Full-featured, professional-looking software, saas and startup nextjs template.",
 };
 export default function ContactPage() {
   return (
