@@ -5,8 +5,7 @@ import Footer2 from "@/components/footers/Footer2";
 import Resources from "@/components/Resources/pageResouce";
 import Contact1 from "@/components/innerpages/Contact1";
 export const metadata = {
-  title:
-    "Resources || Brainwave",
+  title: "Resources || Brainwave",
   description:
     "Brainwave - Full-featured, professional-looking software, saas and startup nextjs template.",
 };
