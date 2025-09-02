@@ -6,22 +6,24 @@ import Pagination from "../common/Pagination";
 
 export default function Resources() {
   return (
-    <div className="section py-3 sm:py-6 lg:py-9">
-      <div className="container max-w-100 bg-dark">
-        <div
-          className="panel vstack items-center gap-2 xl:gap-3 mb-4 lg:mb-8 max-w-100 mx-auto py-10 text-center "
-          data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
-        >
-          <h2 className="h3 lg:h2 xl:h1 m-0 px-2 text-secondary">
-            Insights for your website{" "}
-            <span className="d-inline-flex px-1 bg-secondary text-primary -rotate-1 lg:-rotate-2 rounded-1 lg:rounded-1-5">
-              growth
-            </span>
-          </h2>
-          <p className="fs-6 xl:fs-5 max-w-650px text-gray-100 dark:text-white text-opacity-70">
-            Discover our resources for expert tips, tutorials, and insights on
-            Webflow, design, and SEO to boost your web projects.
-          </p>
+    <div className="section  py-8 lg:pt-9 xl:pt-6   scrollSpysection">
+      <div className="section-outer panel py-1 ">
+        <div className="container max-w-100 bg-dark">
+          <div
+            className="panel vstack items-center gap-2 xl:gap-3 mb-4 lg:mb-8 max-w-100 mx-auto py-10 text-center "
+            data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
+          >
+            <h2 className="h3 lg:h2 xl:h1 m-0 px-2 text-secondary">
+              Insights for your website{" "}
+              <span className="d-inline-flex px-1 bg-secondary text-primary -rotate-1 lg:-rotate-2 rounded-1 lg:rounded-1-5">
+                growth
+              </span>
+            </h2>
+            <p className="fs-6 xl:fs-5 max-w-650px text-gray-100 dark:text-white text-opacity-70">
+              Discover our resources for expert tips, tutorials, and insights on
+              Webflow, design, and SEO to boost your web projects.
+            </p>
+          </div>
         </div>
       </div>
       <div className="container max-w-xl">
